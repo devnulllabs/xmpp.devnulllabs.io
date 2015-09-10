@@ -8,6 +8,8 @@ RUN pacman -Syu --noprogressbar --noconfirm prosody lua51-sec lua51-zlib
 
 ADD ./conf/prosody.cfg.lua /etc/prosody/prosody.cfg.lua
 
+ADD ./modules/mod_carbons.lua /usr/lib/prosody/modules/mod_carbons.lua
+
 VOLUME ["/var/log/prosody", "/var/lib/prosody"]
 
 EXPOSE 5222 5269
